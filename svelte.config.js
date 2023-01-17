@@ -16,7 +16,12 @@ const config = {
     ],
 
     kit: {
-        adapter: adapter()
+        adapter: adapter({
+            pages: 'docs'
+        }),
+        paths: {
+            base: process.env.NODE_ENV === 'production' ? '/font-auto-comparer' : ''
+        }
     }
 };
 
